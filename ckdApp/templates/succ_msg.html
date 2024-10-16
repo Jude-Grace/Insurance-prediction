@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+{% load static %}
+<div class="jumbotron">
+    <h1>INSURANCE CHARGE PREDICTION</h1>
+    <div class="fieldWrapper">
+      <h2>For the values</h2>
+      <p>AGE:{{data_age}}</p>
+      <p>BMI:{{data_bmi}}</p>
+      <p>CHILDREN:{{data_children}}</p>
+      <p>GENDER_M1_F0:{{data_sex}}</p>
+      <p>SMOKER_Y1_N0:{{data_smoker}}</p>
+      <br>
+      <p>INSURANCE CHARGE PREDICTION:{{out}}</p>
+      <br>
+
+    <a  href="{% url 'ckdApp:ckd' %}">CKD Predicition</a>
+    <br>
+</div>
+{% endblock %}
